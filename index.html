@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohan_Aatelie - Macramê Artesanal</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-image-wrapper">
+            <img src="img/logoatlie.svg" alt="Ohan_Aatelie Logo">
+          </div>
+        </div>
+        <!-- Menu Hamburger -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="mainNav">
+          <a href="#home" onclick="showPage('home'); closeMenu(); return false;">Início</a>
+          <a href="#catalogo" onclick="showPage('catalogo'); closeMenu(); return false;">Catálogo</a>
+          <a href="#sobre" onclick="showPage('sobre'); closeMenu(); return false;">Sobre</a>
+          <a href="#servicos" onclick="showPage('servicos'); closeMenu(); return false;">Serviços</a>
+          <a href="#contato" onclick="showPage('contato'); closeMenu(); return false;">Contato</a>
+        </nav>
+        <!-- Overlay do menu -->
+        <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+      </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="page-home" class="page-nav active">
+      <section class="hero">
+        <div class="hero-content">
+          <h1 id="hero-title">Artesanato que abraça seu espaço</h1>
+          <p class="hero-subtitle" id="hero-subtitle">Peças únicas de macramê feitas à mão com amor e dedicação</p><button class="cta-button" onclick="showPage('catalogo')"> <span id="cta-button">Ver Catálogo</span> <i data-lucide="arrow-right" class="btn-icon"></i> </button>
+        </div>
+      </section>
+      <section class="about-section">
+        <div class="about-content">
+          <h2 class="section-title" id="about-title">Feito à mão com amor</h2>
+          <p class="about-text">Cada peça é cuidadosamente criada com fibras naturais, combinando técnicas tradicionais de macramê com design contemporâneo. Transformamos fios em arte para seu lar.</p>
+        </div>
+      </section>
+      <section class="products-section">
+        <div class="about-content">
+          <h2 class="section-title">Destaques</h2>
+        </div>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/arte4.jpg" alt="Painel Decorativo">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Painel Decorativo</h3>
+              <p class="product-price">R$ 180,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="shopping-bag" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/Bolsas_Sophia.jpg" alt="Suporte para Plantas">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Suporte para Plantas</h3>
+              <p class="product-price">R$ 95,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="shopping-bag" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/luminaria2.jpg" alt="Cortina Artesanal">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cortina Artesanal</h3>
+              <p class="product-price">R$ 320,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="shopping-bag" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Catalogo Page -->
+    <div id="page-catalogo" class="page-nav">
+      <section class="products-section" style="padding-top: 3rem;">
+        <div class="about-content">
+          <h2 class="section-title">Nosso Catálogo</h2>
+          <p class="about-text">Explore nossa coleção completa de peças artesanais</p>
+        </div>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/bolsa de mao.webp" alt="Painel Decorativo Grande">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Painel Decorativo Grande</h3>
+              <p class="product-price">R$ 280,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="message-circle" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/painel.webp" alt="Painel Decorativo Médio">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Painel Decorativo Médio</h3>
+              <p class="product-price">R$ 180,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="message-circle" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/suportemacrame2.jpg" alt="Suporte Duplo para Plantas">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Suporte Duplo para Plantas</h3>
+              <p class="product-price">R$ 150,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="message-circle" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/suporteVinho.webp" alt="Suporte Simples para Plantas">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Suporte Simples para Plantas</h3>
+              <p class="product-price">R$ 95,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="message-circle" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/designlua.webp" alt="Cortina Grande">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cortina Grande</h3>
+              <p class="product-price">R$ 420,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="message-circle" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/Chaveiros.webp" alt="Chaveiro Artesanal">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Chaveiro Artesanal</h3>
+              <p class="product-price">R$ 25,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="message-circle" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="img/Caminha_gatos cahorros.webp" alt="Chaveiro Artesanal">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Chaveiro Artesanal</h3>
+              <p class="product-price">R$ 25,00</p><button class="product-button" onclick="showPage('contato')"> Solicitar <i data-lucide="message-circle" class="product-button-icon"></i> </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Sobre Page -->
+    <div id="page-sobre" class="page-nav">
+      <section class="about-section" style="padding-top: 3rem;">
+        <div class="about-content">
+          <h2 class="section-title">Minha Jornada</h2>
+          <div style="max-width: 900px; margin: 3rem auto; background: linear-gradient(135deg, #fff 0%, #f9f1ea 100%); padding: 3rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(74, 52, 40, 0.1);">
+            <div style="text-align: center; margin-bottom: 2rem;">
+              <div style="width: 140px; height: 140px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; box-shadow: 0 8px 20px rgba(163, 57, 18, 0.3); border: 4px solid #fff; background: #f5f5f5;">
+                <img src="img/Joy (2).webp" alt="Joyce" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <h3 style="font-family: 'Cormorant', serif; font-size: 2.5rem; color: #4a3428; margin-bottom: 0.5rem; font-weight: 400;">Joyce Alves</h3>
+              <p style="color: #a33912; font-size: 1.1rem; letter-spacing: 1px;">Artesã &amp; Criadora</p>
+            </div>
+            <div class="about-text" style="max-width: 700px; text-align: left; margin: 0 auto;">
+              <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.9;">Olá! Sou a Joyce, a pessoa por trás de cada nó e criação do <strong>Ohan_Aatelie</strong>. Minha jornada com o macramê começou como um hobby relaxante, mas rapidamente se transformou em uma verdadeira paixão.</p>
+              <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.9;">Cada peça que crio carrega um pouco de mim: minha dedicação aos detalhes, meu amor pela natureza e meu compromisso em trazer aconchego para os lares. Trabalho à mão, fio por fio, respeitando o tempo necessário para que cada criação seja única e especial.</p>
+              <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.9;">Utilizo exclusivamente <strong>fibras naturais de alta qualidade</strong>, como algodão cru e cordas ecológicas, porque acredito que a beleza deve estar em harmonia com a sustentabilidade. Cada nó é feito com técnicas tradicionais, mas com um olhar contemporâneo que dialoga com a decoração moderna.</p>
+              <p style="font-size: 1.05rem; line-height: 1.9;">Mais do que vender peças decorativas, meu objetivo é <strong>transformar espaços em lares acolhedores</strong>, criando elementos que contam histórias e trazem personalidade para cada ambiente. Será um prazer criar algo especial para você!</p>
+            </div>
+          </div>
+          <div style="max-width: 1000px; margin: 4rem auto;">
+            <h3 class="section-title" style="font-size: 2rem;">Meus Valores</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2.5rem;">
+              <div style="text-align: center; padding: 2rem 1.5rem;"><i data-lucide="heart" style="width: 45px; height: 45px; color: #a33912; margin: 0 auto 1rem; display: block; stroke-width: 1.5;"></i>
+                <h4 style="font-size: 1.2rem; color: #4a3428; margin-bottom: 0.8rem; font-weight: 500;">Feito com Amor</h4>
+                <p style="color: #6b5447; line-height: 1.7; font-size: 0.95rem;">Cada nó carrega dedicação e carinho em todos os detalhes</p>
+              </div>
+              <div style="text-align: center; padding: 2rem 1.5rem;"><i data-lucide="leaf" style="width: 45px; height: 45px; color: #a33912; margin: 0 auto 1rem; display: block; stroke-width: 1.5;"></i>
+                <h4 style="font-size: 1.2rem; color: #4a3428; margin-bottom: 0.8rem; font-weight: 500;">Sustentável</h4>
+                <p style="color: #6b5447; line-height: 1.7; font-size: 0.95rem;">Apenas fibras naturais e processos conscientes</p>
+              </div>
+              <div style="text-align: center; padding: 2rem 1.5rem;"><i data-lucide="award" style="width: 45px; height: 45px; color: #a33912; margin: 0 auto 1rem; display: block; stroke-width: 1.5;"></i>
+                <h4 style="font-size: 1.2rem; color: #4a3428; margin-bottom: 0.8rem; font-weight: 500;">Qualidade</h4>
+                <p style="color: #6b5447; line-height: 1.7; font-size: 0.95rem;">Materiais premium para peças duradouras e atemporais</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Servicos Page -->
+    <div id="page-servicos" class="page-nav">
+      <section class="services-section" style="padding-top: 3rem;">
+        <div class="services-content">
+          <h2 class="section-title">Serviços Personalizados</h2>
+          <p class="about-text">Criamos peças exclusivas sob medida para o seu espaço</p>
+          <div class="services-grid">
+            <div class="service-card"><i data-lucide="pencil-ruler" class="service-icon"></i>
+              <h3 class="service-title">Consulta de Projeto</h3>
+              <p class="service-text">Conversamos sobre suas necessidades, estilo e dimensões desejadas para criar a peça perfeita.</p>
+            </div>
+            <div class="service-card"><i data-lucide="sparkles" class="service-icon"></i>
+              <h3 class="service-title">Criação Personalizada</h3>
+              <p class="service-text">Desenvolvimento da peça com cores, tamanhos e detalhes exclusivos para o seu projeto.</p>
+            </div>
+            <div class="service-card"><i data-lucide="package-check" class="service-icon"></i>
+              <h3 class="service-title">Entrega Cuidadosa</h3>
+              <p class="service-text">Embalagem especial e envio seguro para que sua peça chegue perfeita até você.</p>
+            </div>
+          </div>
+          <div class="about-content" style="margin-top: 4rem;">
+            <h3 class="section-title" style="font-size: 1.8rem;">Como Funciona</h3>
+
+            <div class="about-text" style="max-width: 700px; text-align: left; margin: 2rem auto;">
+              <p style="margin-bottom: 1rem;"><strong>1.</strong> Entre em contato pelo WhatsApp ou Instagram para iniciar seu pedido</p>
+              <p style="margin-bottom: 1rem;"><strong>2.</strong> Informe o tipo de peça que deseja e envie suas referências</p>
+              <p style="margin-bottom: 1rem;"><strong>3.</strong> Receba um orçamento personalizado conforme o modelo escolhido</p>
+              <p style="margin-bottom: 1rem;"><strong>4.</strong> Aprove o valor e aguarde enquanto a peça é produzida</p>
+              <p><strong>5.</strong> Receba sua peça única feita à mão com todo cuidado</p>
+            </div><button class="cta-button" style="margin-top: 2rem;" onclick="showPage('contato')"> Solicitar Orçamento <i data-lucide="send" class="btn-icon"></i> </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contato Page -->
+    <div id="page-contato" class="page-nav">
+      <section class="contact-section" style="padding-top: 3rem;">
+        <div class="contact-content">
+          <h2 class="section-title">Entre em Contato</h2>
+          <p class="about-text">Estamos prontos para criar a peça perfeita para você</p>
+          <div class="contact-buttons"><a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="contact-btn"> <i data-lucide="message-circle" class="contact-icon"></i> <span id="whatsapp-text">WhatsApp</span> </a> <a href="https://instagram.com/ohan_aatelie" target="_blank" rel="noopener noreferrer" class="contact-btn"> <i data-lucide="instagram" class="contact-icon"></i> <span>Instagram</span> </a> <a href="mailto:contato@ohanaatelie.com" target="_blank" rel="noopener noreferrer" class="contact-btn"> <i data-lucide="mail" class="contact-icon"></i> <span>E-mail</span> </a>
+          </div>
+          <div class="about-text" style="margin-top: 4rem; max-width: 600px;">
+            <p style="margin-bottom: 1rem;"><strong>Horário de Atendimento:</strong></p>
+            <p style="margin-bottom: 0.5rem;">Segunda a Sexta: 9h às 18h</p>
+            <p style="margin-bottom: 2rem;">Sábado: 9h às 13h</p>
+            <p style="font-size: 0.95rem; color: #7a6a5a;">Responderemos sua mensagem em até 24 horas úteis. Teremos prazer em ajudá-lo a encontrar ou criar a peça ideal!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links"><a href="https://instagram.com/ohan_aatelie" target="_blank" rel="noopener noreferrer"> <i data-lucide="instagram"></i> </a> <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer"> <i data-lucide="message-circle"></i> </a> <a href="mailto:contato@ohanaatelie.com" target="_blank" rel="noopener noreferrer"> <i data-lucide="mail"></i> </a>
+        </div>
+        <p class="footer-text" id="footer-text">© 2024 Ohan_Aatelie. Feito à mão com amor.</p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // Funções para controle do menu hamburger
+    function toggleMenu() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mainNav = document.getElementById('mainNav');
+      const navOverlay = document.getElementById('navOverlay');
+
+      menuToggle.classList.toggle('active');
+      mainNav.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+
+      // Previne scroll do body quando menu está aberto
+      if (mainNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function closeMenu() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mainNav = document.getElementById('mainNav');
+      const navOverlay = document.getElementById('navOverlay');
+
+      menuToggle.classList.remove('active');
+      mainNav.classList.remove('active');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Adiciona evento ao botão hamburger
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.getElementById('menuToggle');
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          toggleMenu();
+        });
+      }
+
+      // Fecha menu ao clicar fora
+      document.addEventListener('click', function (e) {
+        const mainNav = document.getElementById('mainNav');
+        const menuToggle = document.getElementById('menuToggle');
+
+        if (mainNav.classList.contains('active') &&
+          !mainNav.contains(e.target) &&
+          !menuToggle.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      // Fecha menu ao redimensionar a janela para desktop
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+          closeMenu();
+        }
+      });
+    });
+
+    // Resto do código JavaScript original...
+    const defaultConfig = {
+      hero_title: "Artesanato que abraça seu espaço",
+      hero_subtitle: "Peças únicas de macramê feitas à mão com amor e dedicação",
+      cta_button: "Ver Catálogo",
+      about_title: "Feito à mão com amor",
+      whatsapp_text: "WhatsApp",
+      footer_text: "© 2024 Ohan_Aatelie. Feito à mão com amor.",
+      background_color: "#f2d8c2",
+      surface_color: "#ffffff",
+      text_color: "#4a3428",
+      primary_action_color: "#a33912",
+      secondary_text_color: "#6b5447",
+      font_family: "Montserrat",
+      font_size: 16
+    };
+
+    async function onConfigChange(config) {
+      const baseFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = `'${baseFont}', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`;
+      const baseSize = config.font_size || defaultConfig.font_size;
+
+      document.body.style.fontFamily = baseFontStack;
+      document.body.style.fontSize = `${baseSize}px`;
+      document.body.style.color = config.text_color || defaultConfig.text_color;
+
+      document.querySelector('.page-wrapper').style.background = config.background_color || defaultConfig.background_color;
+      document.querySelector('.header').style.background = config.surface_color || defaultConfig.surface_color;
+
+      const aboutSections = document.querySelectorAll('.about-section, .services-section');
+      aboutSections.forEach(section => {
+        section.style.background = config.surface_color || defaultConfig.surface_color;
+      });
+
+      const productsSections = document.querySelectorAll('.products-section, .contact-section');
+      productsSections.forEach(section => {
+        section.style.background = config.background_color || defaultConfig.background_color;
+      });
+
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
+      document.getElementById('whatsapp-text').textContent = config.whatsapp_text || defaultConfig.whatsapp_text;
+      document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+
+      const primaryButtons = document.querySelectorAll('.cta-button, .contact-btn');
+      primaryButtons.forEach(btn => {
+        btn.style.background = config.primary_action_color || defaultConfig.primary_action_color;
+      });
+
+      const secondaryButtons = document.querySelectorAll('.product-button');
+      secondaryButtons.forEach(btn => {
+        btn.style.borderColor = config.primary_action_color || defaultConfig.primary_action_color;
+        btn.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+      });
+
+      const navLinks = document.querySelectorAll('.nav a');
+      navLinks.forEach(link => {
+        link.style.color = config.text_color || defaultConfig.text_color;
+      });
+
+      const secondaryText = document.querySelectorAll('.hero-subtitle, .about-text, .service-text');
+      secondaryText.forEach(text => {
+        text.style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
+      });
+
+      const sectionTitles = document.querySelectorAll('.section-title');
+      sectionTitles.forEach(title => {
+        title.style.fontSize = `${baseSize * 2}px`;
+        title.style.color = config.text_color || defaultConfig.text_color;
+      });
+
+      const heroTitle = document.querySelector('.hero h1');
+      heroTitle.style.fontSize = `${baseSize * 2.8}px`;
+      heroTitle.style.color = config.text_color || defaultConfig.text_color;
+    }
+
+    function showPage(pageName) {
+      const pages = document.querySelectorAll('.page-nav');
+      pages.forEach(page => page.classList.remove('active'));
+
+      const targetPage = document.getElementById(`page-${pageName}`);
+      if (targetPage) {
+        targetPage.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        setTimeout(() => {
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+        }, 50);
+      }
+    }
+
+    // Adiciona closeMenu ao showPage para mobile
+    const originalShowPage = showPage;
+    showPage = function (pageName) {
+      closeMenu();
+      originalShowPage(pageName);
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => {
+                config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_text_color || defaultConfig.secondary_text_color,
+              set: (value) => {
+                config.secondary_text_color = value;
+                window.elementSdk.setConfig({ secondary_text_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["hero_title", config.hero_title || defaultConfig.hero_title],
+          ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+          ["cta_button", config.cta_button || defaultConfig.cta_button],
+          ["about_title", config.about_title || defaultConfig.about_title],
+          ["whatsapp_text", config.whatsapp_text || defaultConfig.whatsapp_text],
+          ["footer_text", config.footer_text || defaultConfig.footer_text]
+        ])
+      });
+    }
+  </script>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9a72d187b7ca00c9',t:'MTc2NDU5NDU2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
