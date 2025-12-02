@@ -570,14 +570,18 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  /* Menu Hamburguer - Mobile */
+  /* Redução proporcional de todos os elementos */
+  html {
+    font-size: 14px; /* Reduz base de todos os tamanhos de fonte */
+  }
+
+  /* Header e navegação */
   .menu-toggle {
     display: block;
   }
 
   .logo-image-wrapper img {
-    width: 120px;
-    /* Aumenta a logo no mobile */
+    width: 140px; /* Reduzido proporcionalmente */
     height: auto;
   }
 
@@ -586,13 +590,13 @@ body {
     top: 0;
     right: -100%;
     width: 80%;
-    max-width: 300px;
+    max-width: 280px; /* Reduzido */
     height: 100vh;
     background: #fff;
     flex-direction: column;
     align-items: flex-start;
-    padding: 80px 2rem 2rem;
-    gap: 1.5rem;
+    padding: 70px 1.5rem 1.5rem; /* Reduzido */
+    gap: 1rem; /* Reduzido */
     transition: right 0.3s ease-in-out;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -603,14 +607,214 @@ body {
   }
 
   .nav a {
-    font-size: 1.1rem;
+    font-size: 0.95rem; /* Reduzido proporcionalmente */
     width: 100%;
-    padding: 0.8rem 0;
+    padding: 0.6rem 0; /* Reduzido */
     border-bottom: 1px solid rgba(74, 52, 40, 0.1);
   }
 
   .nav a:last-child {
     border-bottom: none;
+  }
+
+  /* Hero Section - Redução proporcional */
+  .hero {
+    height: 75vh; /* Reduzido */
+    padding: 2rem 5%; /* Reduzido */
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Reduzido proporcionalmente */
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem; /* Reduzido proporcionalmente */
+    margin-bottom: 1.8rem;
+  }
+
+  .cta-button {
+    padding: 0.9rem 2.2rem; /* Reduzido proporcionalmente */
+    font-size: 0.85rem; /* Reduzido proporcionalmente */
+    letter-spacing: 1px;
+  }
+
+  .btn-icon {
+    width: 16px; /* Reduzido proporcionalmente */
+    height: 16px; /* Reduzido proporcionalmente */
+  }
+
+  /* Sections gerais - Redução proporcional */
+  .about-section,
+  .products-section,
+  .services-section,
+  .contact-section {
+    padding: 3rem 5%; /* Reduzido proporcionalmente */
+  }
+
+  .section-title {
+    font-size: 1.6rem; /* Reduzido proporcionalmente */
+    margin-bottom: 2rem;
+  }
+
+  .section-title::after {
+    bottom: -8px; /* Ajustado proporcionalmente */
+    width: 50px; /* Reduzido proporcionalmente */
+  }
+
+  .about-text {
+    font-size: 0.95rem; /* Reduzido proporcionalmente */
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  /* Products Grid - Redução proporcional */
+  .products-grid {
+    gap: 1.8rem; /* Reduzido proporcionalmente */
+  }
+
+  .product-card {
+    border-width: 1px;
+  }
+
+  .product-image {
+    height: 250px; /* Reduzido proporcionalmente */
+  }
+
+  .product-image-icon {
+    width: 45px; /* Reduzido proporcionalmente */
+    height: 45px; /* Reduzido proporcionalmente */
+  }
+
+  .product-image-text {
+    font-size: 0.8rem; /* Reduzido proporcionalmente */
+  }
+
+  .product-info {
+    padding: 1.2rem; /* Reduzido proporcionalmente */
+  }
+
+  .product-name {
+    font-size: 1.1rem; /* Reduzido proporcionalmente */
+    margin-bottom: 0.4rem;
+  }
+
+  .product-price {
+    font-size: 0.95rem; /* Reduzido proporcionalmente */
+    margin-bottom: 0.8rem;
+  }
+
+  .product-button {
+    padding: 0.7rem 1.5rem; /* Reduzido proporcionalmente */
+    font-size: 0.8rem; /* Reduzido proporcionalmente */
+    letter-spacing: 0.8px;
+  }
+
+  .product-button-icon {
+    width: 14px; /* Reduzido proporcionalmente */
+    height: 14px; /* Reduzido proporcionalmente */
+  }
+
+  /* Services Section - Redução proporcional */
+  .services-grid {
+    gap: 2rem; /* Reduzido proporcionalmente */
+    margin-top: 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem; /* Reduzido proporcionalmente */
+  }
+
+  .service-icon {
+    width: 50px; /* Reduzido proporcionalmente */
+    height: 50px; /* Reduzido proporcionalmente */
+    margin-bottom: 1rem; /* Reduzido proporcionalmente */
+  }
+
+  .service-title {
+    font-size: 1.1rem; /* Reduzido proporcionalmente */
+    margin-bottom: 0.8rem;
+  }
+
+  .service-text {
+    font-size: 0.9rem; /* Reduzido proporcionalmente */
+    line-height: 1.6;
+  }
+
+  /* Contact Section - Redução proporcional */
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem; /* Reduzido proporcionalmente */
+    margin-top: 2rem;
+  }
+
+  .contact-btn {
+    padding: 0.9rem 2rem; /* Reduzido proporcionalmente */
+    font-size: 0.9rem; /* Reduzido proporcionalmente */
+    letter-spacing: 0.8px;
+  }
+
+  .contact-icon {
+    width: 18px; /* Reduzido proporcionalmente */
+    height: 18px; /* Reduzido proporcionalmente */
+  }
+
+  /* Footer - Redução proporcional */
+  .footer {
+    padding: 2rem 5%; /* Reduzido proporcionalmente */
+  }
+
+  .social-links {
+    gap: 1.5rem; /* Reduzido proporcionalmente */
+    margin-bottom: 1.5rem;
+  }
+
+  .social-links a {
+    width: 40px; /* Reduzido proporcionalmente */
+    height: 40px; /* Reduzido proporcionalmente */
+    font-size: 1.3rem; /* Reduzido proporcionalmente */
+  }
+
+  .social-links a i {
+    width: 18px; /* Reduzido proporcionalmente */
+    height: 18px; /* Reduzido proporcionalmente */
+  }
+
+  .footer-text {
+    font-size: 0.8rem; /* Reduzido proporcionalmente */
+  }
+
+  /* Ajuste das animações de fundo para mobile - MUITO MAIORES */
+  .hero::before {
+    top: 10%;
+    left: 5%;
+    font-size: 4rem; /* AUMENTADO para 4rem */
+    color: rgba(
+      163,
+      57,
+      18,
+      0.12
+    ); /* Opacidade reduzida para não sobrecarregar */
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .hero::after {
+    bottom: 10%;
+    right: 5%;
+    font-size: 4.5rem; /* AUMENTADO para 4.5rem */
+    color: rgba(
+      163,
+      57,
+      18,
+      0.08
+    ); /* Opacidade reduzida para não sobrecarregar */
+    animation: float 10s ease-in-out infinite;
   }
 
   /* Overlay quando menu está aberto */
@@ -627,45 +831,6 @@ body {
 
   .nav-overlay.active {
     display: block;
-  }
-
-  /* Ajustes no conteúdo */
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 1.4rem;
-  }
-
-  /* Ajuste das animações de fundo para mobile */
-  .hero::before {
-    top: 5%;
-    left: 5%;
-    font-size: 2.5rem;
-  }
-
-  .hero::after {
-    bottom: 25%;
-    right: 5%;
-    font-size: 3rem;
   }
 }
 
